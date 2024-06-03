@@ -31,9 +31,13 @@ class CarsController extends Controller
             try{
                 $cars = $carsModel->select('cars.id, cars.model, cars.year, cars.vin, cars.shipping_status, cm.title as make, cars.created_at, cars.updated_at')
                                 ->join('cars_make as cm', 'cm.id = cars.make_id')
-                                ->where('cars.status', 1)->orderBy('cars.created_at', 'DESC')->limit($limit, $offset)->findAll();
-                $this->cache->save($this->cacheKey."-".$pageNo, $cars);
-                return $this->carsResponse->respond($cars, 200);
+                                ->where('cars.status', 1)->orderBy('cars.created_at', 'DESC');
+                $total_records = $cars->countAllResults(false);
+                $pages = ceil($total_records/$limit);
+                $records = $cars->limit($limit, $offset)->findAll();
+                $response = ["pages" => $pages, "data" => $records];
+                $this->cache->save($this->cacheKey."-".$pageNo, $response);
+                return $this->carsResponse->respond($response, 200);
             }
             catch(\Exception $e)
             {
