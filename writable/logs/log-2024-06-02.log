@@ -1,0 +1,256 @@
+CRITICAL - 2024-06-02 08:30:35 --> ParseError: syntax error, unexpected token ":", expecting "]"
+[Method: POST, Route: api/cars]
+in APPPATH\Controllers\API\CarsController.php on line 34.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\coding-test\\app\\Controllers\\API\\CarsController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\API\\CarsController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\API\\CarsController')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\API\\CarsController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 08:31:11 --> ErrorException: Undefined property: App\Controllers\API\CarsController::$carResponse
+[Method: POST, Route: api/cars]
+in APPPATH\Controllers\API\CarsController.php on line 41.
+ 1 APPPATH\Controllers\API\CarsController.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\API\\CarsController::$carResponse', 'C:\\xampp\\htdocs\\coding-test\\app\\Controllers\\API\\CarsController.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\CarsController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CarsController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 09:51:00 --> TypeError: CodeIgniter\Router\RouteCollection::group(): Argument #1 ($name) must be of type string, array given, called in C:\xampp\htdocs\coding-test\app\Config\Routes.php on line 13
+[Method: CLI, Route: make:filter/AuthJwt]
+in SYSTEMPATH\Router\RouteCollection.php on line 771.
+ 1 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group([...], [...], Object(Closure))
+ 2 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\coding-test\\app\\Config\\Routes.php')
+ 3 SYSTEMPATH\CLI\Console.php(41): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH\Boot.php(338): CodeIgniter\CLI\Console->run()
+ 5 SYSTEMPATH\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 6 ROOTPATH\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+CRITICAL - 2024-06-02 09:57:55 --> Error: Class "APP\Filters\AuthJwt" not found
+[Method: GET, Route: api/cars]
+in SYSTEMPATH\Filters\Filters.php on line 197.
+ 1 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 2 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('api/cars', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 10:00:50 --> ErrorException: Undefined property: App\Filters\AuthJwt::$response
+[Method: GET, Route: api/cars]
+in SYSTEMPATH\API\ResponseTrait.php on line 326.
+ 1 SYSTEMPATH\API\ResponseTrait.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Filters\\AuthJwt::$response', 'C:\\xampp\\htdocs\\coding-test\\system\\API\\ResponseTrait.php', 326)
+ 2 SYSTEMPATH\API\ResponseTrait.php(103): App\Filters\AuthJwt->format([...])
+ 3 APPPATH\Filters\AuthJwt.php(47): App\Filters\AuthJwt->respond([...], 404)
+ 4 SYSTEMPATH\Filters\Filters.php(203): App\Filters\AuthJwt->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('api/cars', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 10:01:30 --> ErrorException: Undefined property: App\Filters\AuthJwt::$response
+[Method: GET, Route: api/cars]
+in APPPATH\Filters\AuthJwt.php on line 47.
+ 1 APPPATH\Filters\AuthJwt.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Filters\\AuthJwt::$response', 'C:\\xampp\\htdocs\\coding-test\\app\\Filters\\AuthJwt.php', 47)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\AuthJwt->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('api/cars', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 10:02:56 --> Error: Call to undefined function App\Filters\respond()
+[Method: GET, Route: api/cars]
+in APPPATH\Filters\AuthJwt.php on line 47.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\AuthJwt->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('api/cars', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 10:28:06 --> CodeIgniter\Validation\Exceptions\ValidationException: "testing@test.com" is not a valid rule.
+[Method: POST, Route: api/login]
+in SYSTEMPATH\Validation\Validation.php on line 345.
+ 1 SYSTEMPATH\Validation\Validation.php(345): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('testing@test.com')
+ 2 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('email', 'email', 'testing@test.com', [...], [...], 'email')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\API\UsersController.php(24): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\UsersController->login()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\UsersController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 10:30:50 --> ErrorException: Attempt to read property "email" on array
+[Method: POST, Route: api/login]
+in APPPATH\Controllers\API\UsersController.php on line 30.
+ 1 APPPATH\Controllers\API\UsersController.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "email" on array', 'C:\\xampp\\htdocs\\coding-test\\app\\Controllers\\API\\UsersController.php', 30)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\UsersController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\UsersController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 10:36:05 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Result::getLastQuery()
+[Method: POST, Route: api/login]
+in APPPATH\Controllers\API\UsersController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\UsersController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\UsersController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 10:36:16 --> ErrorException: Undefined variable $db
+[Method: POST, Route: api/login]
+in APPPATH\Controllers\API\UsersController.php on line 33.
+ 1 APPPATH\Controllers\API\UsersController.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\xampp\\htdocs\\coding-test\\app\\Controllers\\API\\UsersController.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\UsersController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\UsersController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 10:54:27 --> ArgumentCountError: password_hash() expects at least 2 arguments, 1 given
+[Method: POST, Route: api/login]
+in APPPATH\Controllers\API\UsersController.php on line 32.
+ 1 APPPATH\Controllers\API\UsersController.php(32): password_hash(Object(SensitiveParameterValue))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\UsersController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\UsersController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 10:58:12 --> ErrorException: Undefined variable $userModel
+[Method: POST, Route: api/login]
+in APPPATH\Controllers\API\UsersController.php on line 31.
+ 1 APPPATH\Controllers\API\UsersController.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userModel', 'C:\\xampp\\htdocs\\coding-test\\app\\Controllers\\API\\UsersController.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\UsersController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\UsersController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 10:58:32 --> ErrorException: Undefined variable $expiry
+[Method: POST, Route: api/login]
+in APPPATH\Controllers\API\UsersController.php on line 49.
+ 1 APPPATH\Controllers\API\UsersController.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $expiry', 'C:\\xampp\\htdocs\\coding-test\\app\\Controllers\\API\\UsersController.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\UsersController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\UsersController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 10:58:44 --> ErrorException: Attempt to read property "last_name" on array
+[Method: POST, Route: api/login]
+in APPPATH\Controllers\API\UsersController.php on line 54.
+ 1 APPPATH\Controllers\API\UsersController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "last_name" on array', 'C:\\xampp\\htdocs\\coding-test\\app\\Controllers\\API\\UsersController.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\UsersController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\UsersController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 10:58:57 --> Error: Class "App\Controllers\API\JWT" not found
+[Method: POST, Route: api/login]
+in APPPATH\Controllers\API\UsersController.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\UsersController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\UsersController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 11:04:19 --> Error: Firebase\JWT\JWT::decode(): Argument #3 ($headers) cannot be passed by reference
+[Method: GET, Route: api/cars]
+in APPPATH\Filters\AuthJwt.php on line 52.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\AuthJwt->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('api/cars', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 11:50:37 --> Firebase\JWT\BeforeValidException: Cannot handle token with nbf prior to 2024-06-02T12:50:37+0000
+[Method: POST, Route: api/login]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 156.
+ 1 APPPATH\Controllers\API\UsersController.php(63): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJDb2RpbmdUZXN0IiwiYXVkIjoiQ29kaW5nVGVzdFVzZXIiLCJzdWIiOiIxIiwiaWF0IjoxNzE3MzI5MDM3LCJuYmYiOjE3MTczMzI2Mzd9._Aw5wEdqk6VqSCAOQVBqfPjNNMfEwp6PUXjErw5Y614', Object(Firebase\JWT\Key))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\UsersController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\UsersController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 11:52:01 --> Error: Call to undefined function App\Controllers\API\datetime()
+[Method: POST, Route: api/login]
+in APPPATH\Controllers\API\UsersController.php on line 53.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\UsersController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\UsersController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 11:52:28 --> Error: Call to undefined function App\Controllers\API\now()
+[Method: POST, Route: api/login]
+in APPPATH\Controllers\API\UsersController.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\UsersController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\UsersController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 14:01:42 --> ErrorException: date_default_timezone_set(): Timezone ID 'GST' is invalid
+[Method: POST, Route: api/login]
+in SYSTEMPATH\CodeIgniter.php on line 193.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'date_default_timezone_set(): Timezone ID \'GST\' is invalid', 'C:\\xampp\\htdocs\\coding-test\\system\\CodeIgniter.php', 193)
+ 2 SYSTEMPATH\CodeIgniter.php(193): date_default_timezone_set('GST')
+ 3 SYSTEMPATH\Boot.php(299): CodeIgniter\CodeIgniter->initialize()
+ 4 SYSTEMPATH\Boot.php(66): CodeIgniter\Boot::initializeCodeIgniter()
+ 5 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 14:02:56 --> ErrorException: date_default_timezone_set(): Timezone ID 'UTC +4' is invalid
+[Method: POST, Route: api/login]
+in SYSTEMPATH\CodeIgniter.php on line 193.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'date_default_timezone_set(): Timezone ID \'UTC +4\' is invalid', 'C:\\xampp\\htdocs\\coding-test\\system\\CodeIgniter.php', 193)
+ 2 SYSTEMPATH\CodeIgniter.php(193): date_default_timezone_set('UTC +4')
+ 3 SYSTEMPATH\Boot.php(299): CodeIgniter\CodeIgniter->initialize()
+ 4 SYSTEMPATH\Boot.php(66): CodeIgniter\Boot::initializeCodeIgniter()
+ 5 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 14:03:02 --> ErrorException: date_default_timezone_set(): Timezone ID 'UTC+4' is invalid
+[Method: POST, Route: api/login]
+in SYSTEMPATH\CodeIgniter.php on line 193.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'date_default_timezone_set(): Timezone ID \'UTC+4\' is invalid', 'C:\\xampp\\htdocs\\coding-test\\system\\CodeIgniter.php', 193)
+ 2 SYSTEMPATH\CodeIgniter.php(193): date_default_timezone_set('UTC+4')
+ 3 SYSTEMPATH\Boot.php(299): CodeIgniter\CodeIgniter->initialize()
+ 4 SYSTEMPATH\Boot.php(66): CodeIgniter\Boot::initializeCodeIgniter()
+ 5 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 14:05:02 --> ErrorException: date_default_timezone_set(): Timezone ID 'UTC+04:00' is invalid
+[Method: POST, Route: api/login]
+in SYSTEMPATH\CodeIgniter.php on line 193.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'date_default_timezone_set(): Timezone ID \'UTC+04:00\' is invalid', 'C:\\xampp\\htdocs\\coding-test\\system\\CodeIgniter.php', 193)
+ 2 SYSTEMPATH\CodeIgniter.php(193): date_default_timezone_set('UTC+04:00')
+ 3 SYSTEMPATH\Boot.php(299): CodeIgniter\CodeIgniter->initialize()
+ 4 SYSTEMPATH\Boot.php(66): CodeIgniter\Boot::initializeCodeIgniter()
+ 5 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 16:08:38 --> Firebase\JWT\BeforeValidException: Cannot handle token with nbf prior to 2024-06-02T17:08:38+0400
+[Method: POST, Route: api/login]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 156.
+ 1 APPPATH\Controllers\API\UsersController.php(62): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJDb2RpbmdUZXN0IiwiYXVkIjoiQ29kaW5nVGVzdFVzZXIiLCJzdWIiOiIxIiwiaWF0IjoxNzE3MzMwMTE4LCJuYmYiOjE3MTczMzM3MTh9.ivfJXTbRB_xaeIYqCQByDXH3w8YW15v0rzHd7YSMNvs', Object(Firebase\JWT\Key))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\UsersController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\UsersController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 16:13:55 --> Firebase\JWT\SignatureInvalidException: Signature verification failed
+[Method: GET, Route: api/cars]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 150.
+ 1 APPPATH\Filters\AuthJwt.php(53): Firebase\JWT\JWT::decode('eyJhbGciOiJIUzI1NiJ9.e30.hMsbcPJqPz0YYFbn1JNwgK6NJr5zzmlDxZ8WPFZhcKo', Object(Firebase\JWT\Key))
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\AuthJwt->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('api/cars', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
